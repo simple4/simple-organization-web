@@ -1,0 +1,14 @@
+.user_select .tablepager {
+	margin: 0 !important;
+}
+
+.user_select .tablepager .thead,
+.user_select .tablepager .tfilter,
+.user_select .tablepager .tbody {
+	border-left: 0 !important;
+	border-right: 0 !important;
+}
+
+.pager .pager_block_top {
+	margin: 3px !important;
+}

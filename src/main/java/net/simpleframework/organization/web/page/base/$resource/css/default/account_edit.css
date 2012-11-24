@@ -1,0 +1,59 @@
+.AccountStatPage .l {
+	width: 120px !important;
+}
+
+#_userpwd {
+	margin-bottom: 10px;
+	width: 380px;
+}
+
+#_userpwd .v input {
+	width: 99%;
+	background: none;
+	border: 0;
+	line-height: 19px;
+	height: 19px;
+}
+
+#pwd_strength {
+	margin: 3px 1px;
+}
+
+.AccountPasswordPage .mail label {
+	vertical-align: bottom;
+	cursor: pointer;
+}
+
+.AccountPasswordPage .tbar .nav_arrow,
+.UserStatPage .tbar .nav_arrow {
+	line-height: 22px;
+}
+
+.PhotoPage .photo_icon {
+	width: 168px;
+	height: 168px;
+}
+
+.PhotoUploadPage .text input {
+	line-height: 20px;
+	height: 20px;
+}
+
+.PhotoUploadPage .text_button .sbtn {
+	margin-top: 3px !important;
+}
+
+.PhotoUploadPage .desc {
+	color: red;
+	margin: 2px 0 6px 0;
+}
+
+.PhotoUploadResultPage {
+	padding: 4px;
+}
+
+.PhotoUploadResultPage .info {
+	font-size: 22pt;
+	font-weight: bold;
+	line-height: 120%;
+}

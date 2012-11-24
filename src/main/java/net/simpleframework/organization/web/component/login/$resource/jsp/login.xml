@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://simpleframework.net/xsd/default/simple.xsd">
+	<role>sys_anonymous</role>
+
+	<components>
+		<ajaxRequest name="arLogin"
+			handleClass="net.simpleframework.organization.web.component.login.LoginAction"
+			handleMethod="login" selector="#_loginForm" role="sys_anonymous">
+		</ajaxRequest>
+
+		<validation name="loginValidation" triggerSelector="#_loginBtn" warnType="insertAfter">
+			<validator selector="#_accountName" method="required" />
+		</validation>
+
+		<ajaxRequest name="ajaxGetPassword" role="sys_anonymous">
+			<urlForward>get_pwd.jsp</urlForward>
+		</ajaxRequest>
+		<window name="getPasswordWindow" contentRef="ajaxGetPassword" width="280" height="300"
+			title="#(login.7)">
+		</window>
+
+		<menu name="accountMenu" width="100" menuEvent="click" selector="#_accountMenu">
+			<jsBeforeShowCallback>
+        <![CDATA[
+          var items = menu.getItems();
+          items[0].setText(_AccountTypeMSG["normal"]);
+          items[1].setText(_AccountTypeMSG["email"]);
+          items[2].setText(_AccountTypeMSG["mobile"]);
+        ]]>
+			</jsBeforeShowCallback>
+			<menuitem iconClass="login_icon_normal">
+				<jsSelectCallback>_changeAccountType("normal")</jsSelectCallback>
+			</menuitem>
+			<menuitem title="-" />
+			<menuitem iconClass="login_icon_email">
+				<jsSelectCallback>_changeAccountType("email")</jsSelectCallback>
+			</menuitem>
+			<menuitem title="-" />
+			<menuitem iconClass="login_icon_mobile">
+				<jsSelectCallback>_changeAccountType("mobile")</jsSelectCallback>
+			</menuitem>
+		</menu>
+	</components>
+</page>

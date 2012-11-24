@@ -1,0 +1,33 @@
+#_loginForm {
+	text-align: left;
+}
+
+#_loginForm .lm {
+	padding-left: 19px;
+	height: 16px;
+	padding-top: 2px\9; /* ie */
+}
+
+#_loginForm div {
+	margin: 4px 0;
+}
+
+#_accountName,
+#_passwordName {
+	width: 99%;
+	width: 98%\9;
+	height: 18px;
+	line-height: 18px;
+}
+
+.login_icon_normal {
+	background-image: url(images/normal.png);
+}
+
+.login_icon_email {
+	background-image: url(images/email.png);
+}
+
+.login_icon_mobile {
+	background-image: url(images/mobile.png);
+}
